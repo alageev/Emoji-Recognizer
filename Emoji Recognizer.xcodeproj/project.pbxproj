@@ -13,6 +13,7 @@
 		6FD04A7825796D4D00ACC619 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD04A7725796D4D00ACC619 /* Preview Assets.xcassets */; };
 		6FD04A8125796F5900ACC619 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD04A8025796F5900ACC619 /* CameraController.swift */; };
 		6FD04A842579707B00ACC619 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD04A832579707B00ACC619 /* CameraViewController.swift */; };
+		6FD04A882579746300ACC619 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD04A872579746300ACC619 /* Emoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6FD04A7925796D4D00ACC619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FD04A8025796F5900ACC619 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		6FD04A832579707B00ACC619 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		6FD04A872579746300ACC619 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6FD04A7425796D4D00ACC619 /* Assets.xcassets */,
 				6FD04A7925796D4D00ACC619 /* Info.plist */,
 				6FD04A7625796D4D00ACC619 /* Preview Content */,
+				6FD04A872579746300ACC619 /* Emoji.swift */,
 			);
 			path = "Emoji Recognizer";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FD04A882579746300ACC619 /* Emoji.swift in Sources */,
 				6FD04A8125796F5900ACC619 /* CameraController.swift in Sources */,
 				6FD04A842579707B00ACC619 /* CameraViewController.swift in Sources */,
 				6FD04A7325796D4A00ACC619 /* ContentView.swift in Sources */,
