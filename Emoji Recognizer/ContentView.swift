@@ -9,8 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        CameraViewController()
-            .edgesIgnoringSafeArea(.top)
+        ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)) {
+
+            CameraViewController()
+                .edgesIgnoringSafeArea(.top)
+            EmojiBar()
+        }
     }
 }
 
