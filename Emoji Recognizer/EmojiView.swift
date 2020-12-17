@@ -18,14 +18,15 @@ struct EmojiView: View {
     var body: some View {
         Button(action: {
             UIPasteboard.general.string = emoji.image
-        }) {
+        }, label: {
             VStack {
                 Text("\(emoji.probability, specifier: "%.2f")")
                     .foregroundColor(.primary)
+                    .shadow(radius: 5.0)
                 Text(emoji.image)
                     .font(.largeTitle)
             }
-        }
+        })
     }
 }
 
