@@ -41,7 +41,9 @@ class CameraController: NSObject {
         }
         
         func configureDeviceInputs() throws {
-            guard let captureSession = self.captureSession else { throw CameraControllerError.captureSessionIsMissing }
+            guard let captureSession = self.captureSession else {
+                throw CameraControllerError.captureSessionIsMissing
+            }
             
             if let frontCamera = self.frontCamera {
                 self.frontCameraInput = try AVCaptureDeviceInput(device: frontCamera)

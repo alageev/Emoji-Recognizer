@@ -43,7 +43,7 @@ struct Emoji: Identifiable {
         self.jaw = jaw
     }
     
-    mutating func compute(shapes: [ARFaceAnchor.BlendShapeLocation : NSNumber]) {
+    mutating func compute(shapes: [ARFaceAnchor.BlendShapeLocation: NSNumber]) {
         let threshold = 0.4
         
         var probabilities: Set<Double> = []
@@ -97,7 +97,6 @@ struct Emoji: Identifiable {
         for value in values {
             distance += value * value
         }
-        
         return sqrt(distance)
     }
 }

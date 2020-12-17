@@ -11,7 +11,7 @@ struct EmojiView: View {
     
     let emoji: Emoji
     
-    init(_ emoji: Emoji){
+    init(_ emoji: Emoji) {
         self.emoji = emoji
     }
     
