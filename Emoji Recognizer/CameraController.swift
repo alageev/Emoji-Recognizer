@@ -66,7 +66,7 @@ class CameraController: NSObject {
                 try configureCaptureDevices()
                 try configureDeviceInputs()
             } catch {
-                DispatchQueue.main.async{
+                DispatchQueue.main.async {
                     completionHandler(error)
                 }
                 return
@@ -81,7 +81,9 @@ class CameraController: NSObject {
     
     
     func displayPreview(on view: UIView) throws {
-        guard let captureSession = self.captureSession, captureSession.isRunning else { throw CameraControllerError.captureSessionIsMissing }
+        guard let captureSession = self.captureSession, captureSession.isRunning else {
+            throw CameraControllerError.captureSessionIsMissing
+        }
         
         self.previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill

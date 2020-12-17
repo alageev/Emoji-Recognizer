@@ -100,5 +100,3 @@ struct Emoji: Identifiable {
         return sqrt(distance)
     }
 }
-
-

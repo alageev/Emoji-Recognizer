@@ -18,7 +18,7 @@ final class CameraViewController: UIViewController, ARSessionDelegate {
     var currentFaceAnchor: ARFaceAnchor?
     
     override func viewDidLoad() {
-        sceneView = ARSCNView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.size.width,
+        sceneView = ARSCNView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width,
                                             height: UIScreen.main.bounds.size.height))
         
         sceneView.contentMode = UIView.ContentMode.scaleAspectFit
