@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F72391A25880343007E5206 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F72391925880343007E5206 /* EmojiView.swift */; };
 		6FA7DA8E2579A7CB00DFAAF3 /* EmojiSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7DA8D2579A7CB00DFAAF3 /* EmojiSet.swift */; };
 		6FA7DA912579B1A300DFAAF3 /* EmojiBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7DA902579B1A300DFAAF3 /* EmojiBar.swift */; };
-		6FD04A7125796D4A00ACC619 /* Emoji_RecognizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD04A7025796D4A00ACC619 /* Emoji_RecognizerApp.swift */; };
+		6FD04A7125796D4A00ACC619 /* EmojiRecognizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD04A7025796D4A00ACC619 /* EmojiRecognizerApp.swift */; };
 		6FD04A7325796D4A00ACC619 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD04A7225796D4A00ACC619 /* ContentView.swift */; };
 		6FD04A7525796D4D00ACC619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD04A7425796D4D00ACC619 /* Assets.xcassets */; };
 		6FD04A7825796D4D00ACC619 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD04A7725796D4D00ACC619 /* Preview Assets.xcassets */; };
@@ -19,10 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F72391925880343007E5206 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
 		6FA7DA8D2579A7CB00DFAAF3 /* EmojiSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSet.swift; sourceTree = "<group>"; };
 		6FA7DA902579B1A300DFAAF3 /* EmojiBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBar.swift; sourceTree = "<group>"; };
 		6FD04A6D25796D4A00ACC619 /* Emoji Recognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Recognizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FD04A7025796D4A00ACC619 /* Emoji_RecognizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji_RecognizerApp.swift; sourceTree = "<group>"; };
+		6FD04A7025796D4A00ACC619 /* EmojiRecognizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRecognizerApp.swift; sourceTree = "<group>"; };
 		6FD04A7225796D4A00ACC619 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6FD04A7425796D4D00ACC619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FD04A7725796D4D00ACC619 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -62,7 +64,7 @@
 		6FD04A6F25796D4A00ACC619 /* Emoji Recognizer */ = {
 			isa = PBXGroup;
 			children = (
-				6FD04A7025796D4A00ACC619 /* Emoji_RecognizerApp.swift */,
+				6FD04A7025796D4A00ACC619 /* EmojiRecognizerApp.swift */,
 				6FD04A7225796D4A00ACC619 /* ContentView.swift */,
 				6FD04A8025796F5900ACC619 /* CameraController.swift */,
 				6FD04A832579707B00ACC619 /* CameraViewController.swift */,
@@ -72,6 +74,7 @@
 				6FD04A872579746300ACC619 /* Emoji.swift */,
 				6FA7DA8D2579A7CB00DFAAF3 /* EmojiSet.swift */,
 				6FA7DA902579B1A300DFAAF3 /* EmojiBar.swift */,
+				6F72391925880343007E5206 /* EmojiView.swift */,
 			);
 			path = "Emoji Recognizer";
 			sourceTree = "<group>";
@@ -154,11 +157,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FD04A882579746300ACC619 /* Emoji.swift in Sources */,
+				6F72391A25880343007E5206 /* EmojiView.swift in Sources */,
 				6FD04A8125796F5900ACC619 /* CameraController.swift in Sources */,
 				6FA7DA912579B1A300DFAAF3 /* EmojiBar.swift in Sources */,
 				6FD04A842579707B00ACC619 /* CameraViewController.swift in Sources */,
 				6FD04A7325796D4A00ACC619 /* ContentView.swift in Sources */,
-				6FD04A7125796D4A00ACC619 /* Emoji_RecognizerApp.swift in Sources */,
+				6FD04A7125796D4A00ACC619 /* EmojiRecognizerApp.swift in Sources */,
 				6FA7DA8E2579A7CB00DFAAF3 /* EmojiSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +301,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alageev.Emoji-Recognizer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alageev.EmojiRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -319,7 +323,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alageev.Emoji-Recognizer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alageev.EmojiRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

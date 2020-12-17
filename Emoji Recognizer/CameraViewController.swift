@@ -6,8 +6,6 @@
 //  Used code from https://medium.com/@gaspard.rosay/create-a-camera-app-with-swiftui-60876fcb9118
 //
 
-import Foundation
-import UIKit
 import SwiftUI
 import ARKit
 

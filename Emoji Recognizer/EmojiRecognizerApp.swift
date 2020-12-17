@@ -1,5 +1,5 @@
 //
-//  Emoji_RecognizerApp.swift
+//  EmojiRecognizerApp.swift
 //  Emoji Recognizer
 //
 //  Created by Алексей Агеев on 03.12.2020.
@@ -9,7 +9,7 @@ import SwiftUI
 import ARKit
 
 @main
-struct Emoji_RecognizerApp: App {
+struct EmojiRecognizerApp: App {
     
 
     

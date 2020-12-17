@@ -11,16 +11,12 @@ struct EmojiBar: View {
     @ObservedObject var emojis: EmojiSet = EmojiSet.shared
     var body: some View {
         HStack {
-            ForEach (emojis.emojiArray.sorted(by: { $0.probability > $1.probability})[0..<5], id: \.image) { emoji in
-                Text(emoji.image)
-                    .font(.largeTitle)
+            Spacer()
+            ForEach (EmojiSet.shared.emojiArray.sorted(by: { $0.probability > $1.probability})[0..<5]) { emoji in
+                EmojiView(emoji)
+                Spacer()
             }
         }
-//        .onChange(of: emojis.$emojiArray[0], perform: {print($0)})
-        .background (
-        RoundedRectangle(cornerRadius: 500, style: .continuous)
-            .background(Color.white))
-            .padding()
     }
 }
 
