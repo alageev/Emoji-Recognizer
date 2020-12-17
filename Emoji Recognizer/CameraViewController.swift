@@ -18,7 +18,8 @@ final class CameraViewController: UIViewController, ARSessionDelegate {
     var currentFaceAnchor: ARFaceAnchor?
     
     override func viewDidLoad() {
-        sceneView = ARSCNView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        sceneView = ARSCNView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.size.width,
+                                            height: UIScreen.main.bounds.size.height))
         
         sceneView.contentMode = UIView.ContentMode.scaleAspectFit
         view.addSubview(sceneView)
@@ -45,7 +46,8 @@ final class CameraViewController: UIViewController, ARSessionDelegate {
 extension CameraViewController: UIViewControllerRepresentable {
     public typealias UIViewControllerType = CameraViewController
     
-    public func makeUIViewController(context: UIViewControllerRepresentableContext<CameraViewController>) -> CameraViewController {
+    public func makeUIViewController(context: UIViewControllerRepresentableContext<CameraViewController>)
+    -> CameraViewController {
         return CameraViewController()
     }
     
@@ -73,11 +75,10 @@ extension CameraViewController: ARSCNViewDelegate {
     
     /// - Tag: ARFaceGeometryUpdate
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard anchor == currentFaceAnchor else {
+        guard anchor == currentFaceAnchor,
+              let faceAnchor = anchor as? ARFaceAnchor else {
             return
         }
-        
-        guard let faceAnchor = anchor as? ARFaceAnchor else { return }
         
         DispatchQueue.main.sync {
             for i in 0 ..< EmojiSet.shared.emojiArray.count {

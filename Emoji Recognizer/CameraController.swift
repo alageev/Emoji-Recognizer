@@ -25,11 +25,13 @@ class CameraController: NSObject {
     }
     
     func prepare(completionHandler: @escaping (Error?) -> Void) {
+        
         func createCaptureSession() {
             self.captureSession = AVCaptureSession()
         }
+        
         func configureCaptureDevices() throws {
-            let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .front)
+            let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
             
             self.frontCamera = camera
             
@@ -37,20 +39,23 @@ class CameraController: NSObject {
             camera?.unlockForConfiguration()
             
         }
+        
         func configureDeviceInputs() throws {
             guard let captureSession = self.captureSession else { throw CameraControllerError.captureSessionIsMissing }
             
             if let frontCamera = self.frontCamera {
                 self.frontCameraInput = try AVCaptureDeviceInput(device: frontCamera)
                 
-                if captureSession.canAddInput(self.frontCameraInput!) { captureSession.addInput(self.frontCameraInput!)}
-                else { throw CameraControllerError.inputsAreInvalid }
-                
+                if captureSession.canAddInput(self.frontCameraInput!) {
+                    captureSession.addInput(self.frontCameraInput!)
+                } else {
+                    throw CameraControllerError.inputsAreInvalid
+                }
+            } else {
+                throw CameraControllerError.noCamerasAvailable
             }
-            else { throw CameraControllerError.noCamerasAvailable }
             
             captureSession.startRunning()
-            
         }
         
         DispatchQueue(label: "prepare").async {
@@ -58,13 +63,10 @@ class CameraController: NSObject {
                 createCaptureSession()
                 try configureCaptureDevices()
                 try configureDeviceInputs()
-            }
-            
-            catch {
+            } catch {
                 DispatchQueue.main.async{
                     completionHandler(error)
                 }
-                
                 return
             }
             
